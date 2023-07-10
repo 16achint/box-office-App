@@ -1,5 +1,4 @@
 import ActorsCard from './ActorsCard';
-
 export default function ActorsGrid({ actors }) {
   return (
     <div>
