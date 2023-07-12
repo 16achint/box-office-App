@@ -12,7 +12,7 @@ export default function Home() {
     queryFn: () =>
       filter.searchOption === 'shows'
         ? searchForShows(filter.q)
-        : searchForShows(filter.searchOption),
+        : searchForPeople(filter.q),
     enabled: !!filter,
   });
 
