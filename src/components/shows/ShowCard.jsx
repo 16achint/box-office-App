@@ -1,4 +1,4 @@
-const ShowCard = ({ name, image, id, summary }) => {
+const ShowCard = ({ name, image, id, summary, onStarMeClick }) => {
   const summaryScript = summary
     ? summary.split(' ').slice(0, 10).join(' ').replace(/<.+?>/g, ' ')
     : 'No description';
@@ -13,7 +13,9 @@ const ShowCard = ({ name, image, id, summary }) => {
         <a href={`/show/${id}`} target="_blank" rel="noreferrer">
           Read More
         </a>
-        <button type="button">Star me</button>
+        <button type="button" onClick={() => onStarMeClick(id)}>
+          Star me
+        </button>
       </div>
     </div>
   );
