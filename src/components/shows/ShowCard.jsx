@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 import { SearchImgWrapper, SearchCard } from '../common/SearchCard';
 const ShowCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
   const summaryScript = summary
-    ? summary
-        .split(' ')
-        .slice(0, 10)
-        .join(' ')
-        .replace(/<.+?>/g, ' ' + '...')
+    ? summary.split(' ').slice(0, 10).join(' ').replace(/<.+?>/g, ' ') + '...'
     : 'No description';
 
   const starBtnRef = useRef();
