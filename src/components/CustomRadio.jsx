@@ -56,3 +56,15 @@ const StyledRadio = styled.label`
     background: ${({ theme }) => theme.mainColors.blue};
   }
 `;
+
+const data = {
+  name: 'Neeraj',
+  age: 25,
+  greet: function () {
+    setTimeout(function () {
+      console.log('hello' + this.name);
+    });
+  },
+};
+
+data.greet();

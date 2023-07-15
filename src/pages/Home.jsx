@@ -4,6 +4,7 @@ import SearchForm from '../components/SearchForm';
 import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from '@tanstack/react-query';
+import { TextCenter } from '../components/common/TextCenter';
 
 export default function Home() {
   const [filter, setFilter] = useState(null);
@@ -22,10 +23,10 @@ export default function Home() {
   };
   const renderApiData = () => {
     if (apiError) {
-      return <div>Error Occured : {apiError.message}</div>;
+      return <TextCenter>Error Occured : {apiError.message}</TextCenter>;
     }
     if (apiData?.length === 0) {
-      return <div>No result</div>;
+      return <TextCenter>No result</TextCenter>;
     }
     if (apiData) {
       return apiData[0].show ? (
